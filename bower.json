@@ -9,10 +9,9 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#~1.9.3",
-    "icon-icons": "*",
     "paper-tabs": "PolymerElements/paper-tabs#~1.8.0",
-    "deko-cards": "*",
-    "iron-swipeable-pages": "MeTaNoV/iron-swipeable-pages#~1.0.9"
+    "deko-cards": "Hi9Here/deko-cards",
+    "iron-swipeable-pages": "GeoloeG/iron-swipeable-pages#~1.0.9"
   },
   "devDependencies": {
     "iron-test-helpers": "*",

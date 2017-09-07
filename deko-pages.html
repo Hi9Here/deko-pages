@@ -1,11 +1,10 @@
 <link rel="import" href="../iron-swipeable-pages/iron-swipeable-pages.html">
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../deko-deks/deko-deks.html">
 <link rel="import" href="../deko-cards/deko-cards.html">
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../deko-river/deko-river.html">
+<link rel="import" href="../deko-details/deko-details.html">
 <link rel="import" href="../paper-tabs/paper-tabs.html">
 <link rel="import" href="../paper-tabs/paper-tab.html">
-<link rel="import" href="../icon-icons/iron-icons.html">
 <link rel="import" href="../polymer/polymer.html">
 <!--
   `<deko-pages></deko-pages>` deko-pages 4 pages - Deks - Cards - River - Details 
@@ -23,11 +22,12 @@
     </paper-tabs>
     
     <iron-swipeable-pages selected="{{selected}}" threshold="0.2" no-cycle>
-      <deko-deks>d</deko-deks>
-      <deko-cards>c</deko-cards>
-      <deko-river>r</deko-river>
-      <deko-details>d</deko-details>
+      <deko-deks ref="[[deks.ref]]" dek="{{dexRef}}"></deko-deks>
+      <deko-cards ref="[[dexRef]]"></deko-cards>
+      <deko-river> ??? </deko-river>
+      <deko-details ref="[[profileRef]]"></deko-details>
     </iron-swipeable-pages>
+    
   </template>
 </dom-module>
 <script>
@@ -38,6 +38,14 @@
         type:Number,
         value:2,
       },
+      profileRef: {
+        observer:"setRef",
+      },
     },
+    setRefs: function(profileRef) {
+      if (profileRef) {
+        this.deks = {ref: profileRef.collection("deks")}
+      }
+    }
   })
 </script>

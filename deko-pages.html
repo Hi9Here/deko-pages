@@ -18,7 +18,14 @@
       <paper-tab>Deks</paper-tab>
       <paper-tab>Cards</paper-tab>
       <paper-tab>River</paper-tab>
-      <paper-tab>Details</paper-tab>
+      <paper-tab>
+        <template is="dom-if" if="[[user]]">
+          Details
+        </template>
+        <template is="dom-if" if="[[!user]]">
+          login
+        </template>
+      </paper-tab>
     </paper-tabs>
     
     <iron-swipeable-pages selected="{{selected}}" threshold="0.2" no-cycle>
@@ -26,8 +33,12 @@
       <deko-cards ref="[[dekRef]]"></deko-cards>
       <deko-river> ??? </deko-river>
       <deko-details ref="[[profileRef]]">
-        <div on-tap="logout">logout</div>
-        <div on-tap="login" >login</div>
+        <template is="dom-if" if="[[user]]">
+          <div on-tap="logout">logout</div>
+        </template>
+        <template is="dom-if" if="[[!user]]">
+          <div on-tap="login" >login</div>
+        </template>
       </deko-details>
     </iron-swipeable-pages>
   </template>
@@ -54,6 +65,9 @@
     },
     logout: function(e,d){
       this.fire("logout",d)
+    },
+    login: function(e,d){
+      this.fire("login",d)
     },
   })
 </script>

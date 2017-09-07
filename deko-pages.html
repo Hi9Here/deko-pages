@@ -33,11 +33,11 @@
       <deko-cards ref="[[dekRef]]"></deko-cards>
       <deko-river> ??? </deko-river>
       <deko-details ref="[[profileRef]]">
+        <template is="dom-if" if="[[!user]]">
+          <h2 on-tap="login" >login</h2>
+        </template>
         <template is="dom-if" if="[[user]]">
           <div on-tap="logout">logout</div>
-        </template>
-        <template is="dom-if" if="[[!user]]">
-          <div on-tap="login" >login</div>
         </template>
       </deko-details>
     </iron-swipeable-pages>

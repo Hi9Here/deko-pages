@@ -10,10 +10,10 @@
   "dependencies": {
     "polymer": "Polymer/polymer#~1.9.3",
     "paper-tabs": "PolymerElements/paper-tabs#~1.8.0",
-    "deko-river": "Hi9Here/deko-deks",
+    "deko-deks": "Hi9Here/deko-deks",
     "deko-cards": "Hi9Here/deko-cards",
     "deko-river": "Hi9Here/deko-river",
-    "deko-river": "Hi9Here/deko-details",
+    "deko-details": "Hi9Here/deko-details",
     "iron-swipeable-pages": "GeoloeG/iron-swipeable-pages#~1.0.9"
   },
   "devDependencies": {

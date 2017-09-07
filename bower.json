@@ -1,0 +1,21 @@
+{
+  "name": "deko-pages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deko-pages.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.9.3",
+    "icon-icons": "*",
+    "paper-tabs": "PolymerElements/paper-tabs#~1.8.0",
+    "deko-cards": "*",
+    "iron-swipeable-pages": "MeTaNoV/iron-swipeable-pages#~1.0.9"
+  },
+  "devDependencies": {
+    "iron-test-helpers": "*",
+    "web-component-tester": "^5.0.0"
+  }
+}

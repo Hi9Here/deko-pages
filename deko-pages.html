@@ -25,9 +25,10 @@
       <deko-deks ref="[[deks.ref]]" dek="{{dekRef}}" route="{{route}}"></deko-deks>
       <deko-cards ref="[[dekRef]]"></deko-cards>
       <deko-river> ??? </deko-river>
-      <deko-details ref="[[profileRef]]"></deko-details>
+      <deko-details ref="[[profileRef]]">
+        <div slot="logout" on-tap="logout">logout</div>
+      </deko-details>
     </iron-swipeable-pages>
-    
   </template>
 </dom-module>
 <script>
@@ -41,11 +42,17 @@
       ref: {
         observer:"setRef",
       },
+      route:{
+        notify:true,
+      },
     },
     setRefs: function(profileRef) {
       if (profileRef) {
         this.deks = {ref: profileRef.collection("deks")}
       }
-    }
+    },
+    logout: function(e,d){
+      this.fire("logout",d)
+    },
   })
 </script>

@@ -61,7 +61,13 @@
       },
       route:{
         notify:true,
+        observer: "setPage",
       },
+    },
+    setPage: function(route) {
+      if (route) {
+        debugger
+      }
     },
     setRef: function(profileRef) {
       if (profileRef) {

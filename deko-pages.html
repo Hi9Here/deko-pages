@@ -65,9 +65,9 @@
       },
     },
     setPage: function(route) {
-      if (route) {
+      if (route && this.ref) {
         if ("cards" === location.hash.substr(1)) {
-          this.set("selected",1)
+          this.selected = 1
         }
       }
     },

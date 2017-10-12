@@ -21,7 +21,6 @@
     
     <paper-tabs selected="{{selected}}">
       <paper-tab>Cards</paper-tab>
-      <paper-tab>River</paper-tab>
       <paper-tab>
         <template is="dom-if" if="[[user]]">
           Details
@@ -33,8 +32,7 @@
     </paper-tabs>
     
     <iron-swipeable-pages selected="{{selected}}" threshold="0.2" no-cycle>
-      <deko-cards ref="[[deks.ref]]"></deko-cards>
-      <deko-river> ??? </deko-river>
+      <deko-cards ref="[[cards.ref]]" ></deko-cards>
       <deko-details ref="[[profileRef]]">
         <template is="dom-if" if="[[!user]]">
           <h2 on-tap="login" >login</h2>
@@ -71,7 +69,7 @@
     },
     setRef: function(profileRef) {
       if (profileRef) {
-        this.deks = {ref: profileRef.collection("cards")}
+        this.cards = {ref: profileRef.collection("cards")}
       }
     },
     logout: function(e,d){

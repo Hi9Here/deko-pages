@@ -32,7 +32,7 @@
     </paper-tabs>
     
     <iron-swipeable-pages selected="{{selected}}" threshold="0.2" no-cycle>
-      <deko-cards ref="[[cards.ref]]" ></deko-cards>
+      <deko-cards cards="[[cards.ref]]" ></deko-cards>
       <deko-details ref="[[profileRef]]">
         <template is="dom-if" if="[[!user]]">
           <h2 on-tap="login" >login</h2>

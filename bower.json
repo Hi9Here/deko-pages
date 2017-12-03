@@ -8,13 +8,8 @@
     "web-components"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~1.9.3",
-    "paper-tabs": "PolymerElements/paper-tabs#~1.8.0",
-    "deko-deks": "Hi9Here/deko-deks",
-    "deko-cards": "Hi9Here/deko-cards",
-    "deko-river": "Hi9Here/deko-river",
-    "deko-details": "Hi9Here/deko-details",
-    "iron-swipeable-pages": "GeoloeG/iron-swipeable-pages#~1.0.9"
+    "polymer": "Polymer/polymer#~1.11.0.",
+    "deko-cards": "Hi9Here/deko-cards"
   },
   "devDependencies": {
     "iron-test-helpers": "*",

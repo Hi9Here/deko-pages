@@ -20,9 +20,12 @@
       ref: {
         observer:"setRef",
       },
-      route:{
+      tail:{
         notify:true,
         observer: "setPage",
+      },
+      route:{
+        notify:true,
       },
     },
     setPage:function(route){

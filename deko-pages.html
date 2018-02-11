@@ -6,7 +6,7 @@
 -->
 <dom-module id="deko-pages">
   <template>
-    <deko-cards on-logout="logout" cards="[[cards.ref]]" profile-id="[[ref.id]]" ></deko-cards>
+    <deko-cards on-logout="logout" cards="[[cards.ref]]" dek="[[dek]]" profile-id="[[ref.id]]" ></deko-cards>
   </template>
 </dom-module>
 <script>
@@ -24,6 +24,9 @@
         notify:true,
         observer: "setPage",
       },
+    },
+    setPage:function(route){
+      console.log(route)
     },
     setRef: function(profileRef) {
       if (profileRef) {

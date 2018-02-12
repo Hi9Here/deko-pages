@@ -7,7 +7,7 @@
 <dom-module id="deko-pages">
   <template>
     <app-route route="{{route}}" pattern="/:data" data="{{routeData}}" tail="{{tail}}"></app-route>
-    <deko-cards on-logout="logout" cards="[[cards.ref]]" route="{{tail}}" profile-id="[[ref.id]]" ></deko-cards>
+    <deko-cards on-logout="logout" cards="[[cards.ref]]" route="{{route}}" profile-id="[[ref.id]]" ></deko-cards>
   </template>
 </dom-module>
 <script>
